@@ -10,11 +10,15 @@ Param (
 
 #>
 
+# AUTO
+# Intel(R) Iris(R) Xe Graphics
+# NVIDIA GeForce RTX 3080
 Param (
-[string]$VMName,
-[string]$GPUName,
+[string]$VMName = "nibiru",
+[string]$GPUName = "AUTO",
 [string]$Hostname = $ENV:Computername
 )
+
 
 Import-Module $PSSCriptRoot\Add-VMGpuPartitionAdapterFiles.psm1
 
